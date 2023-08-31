@@ -10,4 +10,8 @@ public class Account {
     public double getAmount () {
         return amount;
     }
+    
+    public void depositMoney (double deposit) {
+        amount += deposit;
+    }
 }
