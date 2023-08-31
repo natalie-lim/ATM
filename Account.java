@@ -14,4 +14,8 @@ public class Account {
     public void depositMoney (double deposit) {
         amount += deposit;
     }
+    
+    public void withdrawMoney (double withdrawal) {
+        amount -= withdrawal;
+    }
 }
