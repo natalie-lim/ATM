@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class ATM {
     private HashMap <String, Account> mapOfAccounts;
     
-    public ATM (String email) {
+    public ATM () {
         this.mapOfAccounts = new HashMap<String, Account>();
     }
     
@@ -11,7 +11,13 @@ public class ATM {
         if (mapOfAccounts.get(emailString) != null) {
             throw new Error("User already exists");
         }
-        Account account = new Account(emailString);
         mapOfAccounts.put (emailString, new Account(emailString, amount));
+    }
+    
+    public void closeAccount (String emailString) {
+        if (mapOfAccounts.get(emailString).getAmount() == 0) {
+            mapOfAccounts.remove(emailString);
+        }
+        throw new Error ("Please remove the rest of your $$$ before closing;");
     }
 }

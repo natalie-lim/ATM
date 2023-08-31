@@ -6,4 +6,8 @@ public class Account {
         this.emailString = emailString;
         this.amount = initialDeposit;
     }
+    
+    public double getAmount () {
+        return amount;
+    }
 }
