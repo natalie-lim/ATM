@@ -21,8 +21,9 @@ public class ATM {
     public void closeAccount (String emailString) {
         if (mapOfAccounts.get(emailString).getAmount() == 0) {
             mapOfAccounts.remove(emailString);
+        } else {
+            throw new Error ("Please remove the rest of your $$$ before closing;");
         }
-        throw new Error ("Please remove the rest of your $$$ before closing;");
     }
     
     public double checkBalance (String emailString) {
@@ -73,6 +74,7 @@ public class ATM {
             pw.println(email);
             pw.println(amount);
         }
+        pw.close();
     }
     
     private boolean userExists (String emailString) {

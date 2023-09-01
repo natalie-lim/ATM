@@ -1,0 +1,8 @@
+dog@gmail.com
+212.23
+bob@gmail.com
+33.23
+cat@gmail.com
+1034.23
+apple@gmail.com
+13551.23
